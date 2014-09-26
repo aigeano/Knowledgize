@@ -4,7 +4,6 @@ import json, requests, sys
 import summaly
 import summarize
 from nltk.corpus import wordnet as wn 
-from text.blob import Word
 
 app = Flask(__name__)
 
