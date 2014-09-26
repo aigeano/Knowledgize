@@ -31,7 +31,7 @@ def index():
         text = summarize.summarize(url, query.lower())
         summary += text
 
-        return redirect("http://tts-api.com/tts.mp3?q="+summary, code= 302 )
+        return redirect("tts-api.com/tts.mp3?q="+summary, code= 302 )
 
 
 
