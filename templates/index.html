@@ -392,14 +392,14 @@ if (!('webkitSpeechRecognition' in window)) {
       }
     }
      final_transcript = capitalize(final_transcript);
-    
+    document.getElementById("query").value = final_transcript;
     final_span.innerHTML = linebreak(final_transcript);
     
     interim_span.innerHTML = linebreak(interim_transcript);
       
     if (final_transcript || interim_transcript) {
       showButtons('inline-block');
-      document.getElementById("query").value = final_transcript;
+      
     
       console.log(document.getElementById("query").value);
       document.getElementById("f1").submit();  
@@ -499,5 +499,14 @@ function showButtons(style) {
   email_info.style.display = 'none';
 }
     </script>
+
+    <audio controls autoplay>
+
+		<source src="http://tts-api.com/tts.mp3?q={{summary}}" type="audio/mpeg"  />
+
+
+<em>Sorry, your browser doesn't support HTML5 audio.</em>
+
+</audio>
   </body>
 </html>

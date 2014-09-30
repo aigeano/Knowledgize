@@ -30,12 +30,19 @@ def index():
 
         text = summarize.summarize(url, query.lower())
         summary += text
+        '''word = summary.split()
+        sent = ""
+        for w in word :
+            sent += word + "%20"'''
 
-        return redirect("http://tts-api.com/tts.mp3?q="+summary, code= 302 )
+        
+
+        return render_template("index.html",summary = summary)
 
 
 
 
 
 if __name__ == '__main__':
+
     app.run()
